@@ -10,7 +10,7 @@ type NavigationProps = {
 export function Navigation({ blurType }: NavigationProps) {
   return (
     <header
-      className={`fixed top-0 z-50 w-full ${blurType} flex flex-col justify-center items-center px-[150px]`}
+      className={`fixed top-0 z-50 w-full ${blurType} flex flex-col justify-center items-center`}
     >
       <div className="w-full max-w-[1280px] flex justify-between">
         <div className="hover:scale-110 transition-transform duration-200">
@@ -42,9 +42,7 @@ export function Navigation({ blurType }: NavigationProps) {
               TOURS
             </a>
           </div>
-          <Button className="flex items-center justify-center text-2xl font-normal font-['Bebas_Neue'] tracking-wide bg-neutral-100 rounded-sm text-zinc-700 h-12 min-w-[128px] transition-color hover:text-neutral-100 hover:bg-zinc-700 cursor-pointer  duration-200">
-            BOOK NOW
-          </Button>
+
           {/* <ModeToggle /> */}
         </nav>
       </div>

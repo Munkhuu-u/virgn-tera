@@ -38,10 +38,10 @@ export default function HomePage() {
     <div className="bg-background flex flex-col items-center">
       <Navigation blurType="backdrop-blur-md" />
       <Hero />
-      {/* <WhyUs />
+      <WhyUs /> {/* 20/Aug odor zasah ystoi */}
       <WhereToExplore />
       <QuoteSection />
-      <FooterSection /> */}
+      <FooterSection />
     </div>
   );
 }
