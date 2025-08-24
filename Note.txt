@@ -1,0 +1,16 @@
+FE
+- [ ] Language changer
+- [ ] Identify and on/off dark mode
+- [ ] Vertical and Horizontal padding
+- [ ] make web to get images from cloud
+- [ ] Responsive design
+- [ ] Pages
+    - [ ] Travel page
+    - [ ] About us page
+- [ ] When press phone number & email copy to clipboard and open phone call, new mail window
+- [ ] when press logo go to home page
+- [ ] hide horizontal scroll in WHERE TO EXPLORE
+
+
+BE
+- 

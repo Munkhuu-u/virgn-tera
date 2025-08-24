@@ -4,7 +4,7 @@ import Image from "next/image";
 export function WhyUs() {
   return (
     // <section className="py-[40px] px-11 bg-orange-50 overflow-hidden">
-    <section className="py-[40px] px-11  overflow-hidden bg-orange-50 dark:bg-black text-black dark:text-orange-50">
+    <section className="w-lvw max-w-[1280px] flex flex-col justify-center h-[70lvh] overflow-hidden bg-[var(--foreground)] text-[var(--foreground)]">
       <div className="flex relative">
         {/* border layer */}
         <div className="absolute right-20 top-0 w-[1000px]">
@@ -17,7 +17,7 @@ export function WhyUs() {
             style={{ display: "block" }}
           />
         </div>
-        <div className="flex relative gap-[150px]">
+        <div className="flex justify-center relative gap-[150px]">
           {/* Left side: Image */}
           <div className="flex items-center relative w-2xl">
             <Image
@@ -64,7 +64,7 @@ export function WhyUs() {
               We believe in responsible and sustainable tourism that benefits
               both travelers and the locals alike.
             </p>
-            <Button className="flex items-center justify-center text-2xl font-normal font-['Bebas_Neue'] tracking-wide rounded-sm text-white h-12 hover:bg-zinc-400 hover:text-color-900 transition-colors duration-200">
+            <Button className="flex items-center justify-center text-2xl font-normal font-['Bebas_Neue'] tracking-wide rounded-sm h-12 min-w-[128px] transition-color cursor-pointer  duration-200 text-[var(--foreground)] hover:text-[var(--popover-foreground)] bg-[var(--background)] hover:bg-[var(--popover)]">
               ABOUT US
             </Button>
           </div>

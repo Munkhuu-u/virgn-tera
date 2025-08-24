@@ -6,7 +6,7 @@ import Logo from "../../../public/Logo";
 export function Hero() {
   return (
     // className="flex-1 h-7 text-center justify-start  text-2xl font-normal font-['Bebas_Neue'] transition-transform duration-200 hover:scale-110 hover:cursor-pointer hover:text-[var(--popover-foreground)]"
-    <section className="relative h-lvh w-lvw max-w-[1280px] flex flex-col justify-center">
+    <section className="relative h-[90lvh] w-lvw max-w-[1280px] flex flex-col justify-center">
       <Image
         src="/hero-landscape.png"
         alt="Dramatic landscape with stormy skies"

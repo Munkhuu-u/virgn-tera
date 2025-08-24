@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function QuoteSection() {
   return (
-    <section className="py-[40px] px-11 bg-orange-50 overflow-hidden flex justify-center items-center">
+    <section className="h-[60lvh] w-lvw max-w-[1280px] py-[40px] px-11 overflow-hidden flex justify-center items-center">
       <div className="flex relative">
         {/* border layer */}
         <div className="absolute right-0 w-[800px]">

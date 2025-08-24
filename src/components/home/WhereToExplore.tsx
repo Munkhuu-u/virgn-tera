@@ -29,7 +29,7 @@ import CustomArrowRight from "@/components/customIcons/arrowRight";
 export function WhereToExplore() {
   const [sliderIndex, setSliderIndex] = useState(0);
   return (
-    <section className="py-6 bg-orange-50">
+    <section className="flex flex-col justify-center h-[70lvh] w-lvw max-w-[1280px] bg-[var(--foreground)]">
       <div className="container mx-auto px-4">
         <header className="flex items-center justify-between mb-12 px-4">
           <div className="flex flex-row gap-2 text-6xl font-normal font-['Bebas_Neue']">

@@ -38,8 +38,8 @@ export function TravelCard({
   includes,
 }: TravelCardProps) {
   return (
-    <Link href={link} className="flex-shrink-0">
-      <Card className="relative w-[1000px] h-[661px] overflow-hidden group cursor-pointer flex flex-col justify-center">
+    <Link href={link} className="flex-shrink-0 w-2/3">
+      <Card className="relative h-[661px] overflow-hidden group cursor-pointer flex flex-col justify-center">
         <Image
           src={image}
           // alt={title}
@@ -85,7 +85,7 @@ export function TravelCard({
               <span>500</span>
             </div>
           </div>
-          <Button className="w-[128px] md:w-[64px] text-zinc-700 text-2xl font-normal font-['Bebas_Neue'] bg-neutral-100 rounded-sm hover:text-white h-12 min-w-[128px] transition-color duration-200">
+          <Button className="w-[128px] md:w-[64px] text-2xl font-normal font-['Bebas_Neue'] rounded-sm h-12 min-w-[128px] duration-200 text-[var(--foreground)] hover:text-[var(--popover-foreground)] bg-[var(--background)] hover:bg-[var(--popover)]">
             BOOK NOW
           </Button>
         </div>

@@ -5,7 +5,7 @@ import { Phone, Mail, Facebook, Instagram, Twitter } from "lucide-react";
 
 export default function FooterSection() {
   return (
-    <footer className="relative py-20">
+    <footer className="relative h-[60lvh] py-20 w-lvw max-w-[1280px]  flex flex-col items-center justify-center">
       <Image
         src="/footer-background.png"
         alt="Desert landscape footer"
@@ -18,8 +18,7 @@ export default function FooterSection() {
             "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))",
         }}
       />
-      <div className="absolute inset-0 " />
-      <div className="relative z-10 container mx-auto px-4 text-white">
+      <div className="relative z-10 container mx-auto px-4 text-white flex flex-col items-center">
         <h2 className="text-center text-6xl md:text-8xl font-bold tracking-wider font-['Bebas_Neue'] mb-16">
           VIGN TERRA
         </h2>
@@ -46,7 +45,7 @@ export default function FooterSection() {
           />
           <div className="md:col-span-2 text-center">
             <Button className=" text-zinc-700 text-2xl font-normal font-['Bebas_Neue'] tracking-wide bg-neutral-100 rounded-sm hover:text-white h-12 min-w-[128px] transition-color duration-200">
-              Submit{" "}
+              Submit
             </Button>
           </div>
         </form>

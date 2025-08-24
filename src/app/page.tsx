@@ -35,7 +35,7 @@ export default function HomePage() {
   const [sliderIndex, setSliderIndex] = useState(0);
 
   return (
-    <div className="bg-background flex flex-col items-center">
+    <div className="bg-[var(--foreground)] flex flex-col items-center">
       <Navigation blurType="backdrop-blur-md" />
       <Hero />
       <WhyUs /> {/* 20/Aug odor zasah ystoi */}

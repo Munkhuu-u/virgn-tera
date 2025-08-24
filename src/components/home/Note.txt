@@ -1,1 +1,0 @@
-Set horizontal padding in Navitation.tsx
