@@ -1,9 +1,48 @@
+import { useState } from "react"; // ✅ Add this at the top if not yet
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Facebook, Instagram, Twitter } from "lucide-react";
 
 export default function FooterSection() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const payload = {
+      name: `${formData.firstName} ${formData.lastName}`,
+      email: formData.email,
+      message: `Phone: ${formData.phone}`,
+    };
+
+    try {
+      const res = await fetch("http://localhost:4000/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await res.json();
+      alert(result.message || "Submitted!");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("There was an error. Try again.");
+    }
+  };
+
   return (
     <footer className="relative h-[60lvh] py-20 w-lvw max-w-[1280px]  flex flex-col items-center justify-center">
       <Image
@@ -22,33 +61,56 @@ export default function FooterSection() {
         <h2 className="text-center text-6xl md:text-8xl font-bold tracking-wider font-['Bebas_Neue'] mb-16">
           VIGN TERRA
         </h2>
-        <form className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <form
+          onSubmit={handleSubmit}
+          className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-4"
+        >
           <input
             type="text"
+            name="firstName"
             placeholder="First Name"
+            value={formData.firstName}
+            onChange={handleChange}
+            required
             className="placeholder-white px-4 py-2 border-b-2 border-white bg-transparent text-white focus:outline-none focus:ring-0"
           />
           <input
             type="text"
+            name="lastName"
             placeholder="Last Name"
+            value={formData.lastName}
+            onChange={handleChange}
+            required
             className="placeholder-white px-4 py-2 border-b-2 border-white bg-transparent text-white focus:outline-none focus:ring-0"
           />
           <input
             type="email"
+            name="email"
             placeholder="Email Address"
+            value={formData.email}
+            onChange={handleChange}
+            required
             className="placeholder-white px-4 py-2 border-b-2 border-white bg-transparent text-white focus:outline-none focus:ring-0"
           />
           <input
             type="tel"
+            name="phone"
             placeholder="Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+            required
             className="placeholder-white px-4 py-2 border-b-2 border-white bg-transparent text-white focus:outline-none focus:ring-0"
           />
           <div className="md:col-span-2 text-center">
-            <Button className=" text-zinc-700 text-2xl font-normal font-['Bebas_Neue'] tracking-wide bg-neutral-100 rounded-sm hover:text-white h-12 min-w-[128px] transition-color duration-200">
+            <Button
+              type="submit"
+              className="text-zinc-700 text-2xl font-normal font-['Bebas_Neue'] tracking-wide bg-neutral-100 rounded-sm hover:text-white h-12 min-w-[128px] transition-color duration-200"
+            >
               Submit
             </Button>
           </div>
         </form>
+
         <div className="grid md:grid-cols-4 gap-8 text-sm">
           {[
             {

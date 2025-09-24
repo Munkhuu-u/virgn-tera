@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import Logo from "../../../public/Logo";
 import { ModeToggle } from "@/components/home/ThemeButton";
+import { translations, t, Lang } from "@/languages/i18n";
 
 type NavigationProps = {
   blurType?: string;
@@ -44,6 +45,17 @@ export function Navigation({ blurType }: NavigationProps) {
           </div>
 
           {/* <ModeToggle /> */}
+          <select
+            value={lang}
+            onChange={(e) => setLang(e.target.value as Lang)}
+            className="bg-[var(--background)]"
+          >
+            {Object.keys(translations).map((l) => (
+              <option key={l} value={l}>
+                {l.toUpperCase()}
+              </option>
+            ))}
+          </select>
         </nav>
       </div>
     </header>

@@ -1,6 +1,7 @@
 FE
 - [ ] Language changer
 - [ ] Identify and on/off dark mode
+- [ ] Hide horizontal scroll in WHERE TO EXPLORE
 - [ ] Vertical and Horizontal padding
 - [ ] make web to get images from cloud
 - [ ] Responsive design
@@ -9,8 +10,9 @@ FE
     - [ ] About us page
 - [ ] When press phone number & email copy to clipboard and open phone call, new mail window
 - [ ] when press logo go to home page
-- [ ] hide horizontal scroll in WHERE TO EXPLORE
+- [ ] Admin dashboard
 
 
 BE
-- 
+[-]
+
