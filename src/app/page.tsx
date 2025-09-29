@@ -29,7 +29,7 @@ import CustomArrowRight from "@/components/customIcons/arrowRight";
 import { WhereToExplore } from "@/components/home/WhereToExplore";
 import { QuoteSection } from "@/components/home/QuoteSection";
 import FooterSection from "@/components/home/FooterSection";
-import { translations, t, Lang } from "@/languages/i18n";
+import { Lang, translations, t } from "@/lib/i18n";
 
 export default function HomePage() {
   const [sliderIndex, setSliderIndex] = useState(0);

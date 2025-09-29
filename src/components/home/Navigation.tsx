@@ -2,13 +2,15 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import Logo from "../../../public/Logo";
 import { ModeToggle } from "@/components/home/ThemeButton";
-import { translations, t, Lang } from "@/languages/i18n";
+import { translations, t, Lang } from "@/lib/i18n";
+import { useState } from "react";
 
 type NavigationProps = {
   blurType?: string;
 };
 
 export function Navigation({ blurType }: NavigationProps) {
+  const [lang, setLang] = useState<Lang>("en");
   return (
     <header
       className={`fixed top-0 z-50 w-full ${blurType} flex flex-col justify-center items-center`}

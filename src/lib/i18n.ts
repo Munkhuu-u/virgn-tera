@@ -1,4 +1,17 @@
 // src/i18n.ts
+export const en = {
+  Hello: "Hello",
+  exclusiveJourneys: "EXCLUSIVE JOURNEYS TO MONGOLIA",
+  welcomeTo: "WELCOME TO",
+  virginTerra: "VIRGIN TERRA",
+  bookNow: "BOOK NOW",
+} as const;
+
+export type Key = keyof typeof en;
+
+// export type Lang = keyof typeof translations;
+export type Lang = "en" | "mn" | "cn" | "es" | "ru";
+
 export const translations = {
   en: {
     Hello: "Hello",
@@ -35,10 +48,6 @@ export const translations = {
     virginTerra: "НЕОСВОЕННАЯ ЗЕМЛЯ",
     bookNow: "ЗАБРОНИРОВАТЬ",
   },
-};
-
-export type Key = keyof (typeof translations)["en"];
-
-export type Lang = keyof typeof translations;
+} satisfies Record<Lang, Record<Key, string>>;
 
 export const t = (lang: Lang, key: Key) => translations[lang][key];
