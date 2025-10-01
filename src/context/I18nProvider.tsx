@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useContext, createContext, useMemo } from "react";
 import { Lang, Key, translations } from "@/lib/i18n";
 

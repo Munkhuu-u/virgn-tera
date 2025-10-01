@@ -1,3 +1,4 @@
+"use client";
 // src/i18n.ts
 export const en = {
   Hello: "Hello",
@@ -5,6 +6,9 @@ export const en = {
   welcomeTo: "WELCOME TO",
   virginTerra: "VIRGIN TERRA",
   bookNow: "BOOK NOW",
+  home: "Home",
+  aboutUs: "About Us",
+  tours: "Tours",
 } as const;
 
 export type Key = keyof typeof en;
@@ -19,6 +23,9 @@ export const translations = {
     welcomeTo: "WELCOME TO",
     virginTerra: "VIRGIN TERRA",
     bookNow: "BOOK NOW",
+    home: "Home",
+    aboutUs: "About Us",
+    tours: "Tours",
   },
   mn: {
     Hello: "Сайн уу",
@@ -26,6 +33,9 @@ export const translations = {
     welcomeTo: "ТАВТАЙ МОРИЛНО УУ",
     virginTerra: "ЦЭВЭР ГАЗАР",
     bookNow: "ОДОО ЗАХИАЛАХ",
+    home: "Нүүр",
+    aboutUs: "Бидний тухай",
+    tours: "Аялалууд",
   },
   cn: {
     Hello: "你好",
@@ -33,6 +43,9 @@ export const translations = {
     welcomeTo: "欢迎来到",
     virginTerra: "处女之地",
     bookNow: "立即预订",
+    home: "主页",
+    aboutUs: "关于我们",
+    tours: "旅游",
   },
   es: {
     Hello: "Hola",
@@ -40,6 +53,9 @@ export const translations = {
     welcomeTo: "BIENVENIDO A",
     virginTerra: "TIERRA VIRGEN",
     bookNow: "RESERVAR AHORA",
+    home: "Inicio",
+    aboutUs: "Sobre nosotros",
+    tours: "Tours",
   },
   ru: {
     Hello: "Привет",
@@ -47,6 +63,9 @@ export const translations = {
     welcomeTo: "ДОБРО ПОЖАЛОВАТЬ В",
     virginTerra: "НЕОСВОЕННАЯ ЗЕМЛЯ",
     bookNow: "ЗАБРОНИРОВАТЬ",
+    home: "Главная",
+    aboutUs: "О нас",
+    tours: "Туры",
   },
 } satisfies Record<Lang, Record<Key, string>>;
 

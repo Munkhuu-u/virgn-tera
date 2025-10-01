@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -29,37 +30,15 @@ import CustomArrowRight from "@/components/customIcons/arrowRight";
 import { WhereToExplore } from "@/components/home/WhereToExplore";
 import { QuoteSection } from "@/components/home/QuoteSection";
 import FooterSection from "@/components/home/FooterSection";
-import { Lang, translations, t } from "@/lib/i18n";
+import { I18nProvider } from "@/context/I18nProvider";
 
-export default function HomePage() {
-  const [sliderIndex, setSliderIndex] = useState(0);
-
-  const [lang, setLang] = useState<Lang>(
-    () =>
-      (localStorage.getItem("lang") as Lang) ||
-      "en" ||
-      "sp" ||
-      "mn" ||
-      "cn" ||
-      "en" ||
-      "ru"
-  );
-
-  useEffect(() => {
-    localStorage.setItem("lang", lang);
-    document.documentElement.lang = lang;
-  }, [lang]);
-
+export const App: React.FC = () => {
   return (
     <div className="bg-[var(--foreground)] flex flex-col items-center">
-      <p className="bg-[var(--background)]">{t(lang, "Hello")}</p>
-
       <Navigation blurType="backdrop-blur-md" />
       <Hero />
-      {/* <WhyUs /> //20/Aug odor zasah ystoi
-      <WhereToExplore />
-      <QuoteSection />
-      <FooterSection /> */}
     </div>
   );
-}
+};
+
+export default App;
